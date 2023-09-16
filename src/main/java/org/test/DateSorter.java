@@ -39,6 +39,7 @@ public class DateSorter {
      * @param unsortedDates - an unsorted list of dates
      * @return the collection of dates now sorted as per the spec
      */
+
     public Collection<LocalDate> sortDates(List<LocalDate> unsortedDates) {
         if (unsortedDates == null) {
             throw new IllegalArgumentException("Be careful, your list is null. "
@@ -68,7 +69,6 @@ public class DateSorter {
                 .sorted(Comparator.comparing(LocalDate::getMonth, Collections.reverseOrder())
                         .thenComparing(LocalDate::getDayOfMonth))
                 .toList());
-
         return sortedDates;
     }
 
